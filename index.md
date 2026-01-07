@@ -19,18 +19,19 @@ longitude: "-122.332071"
 # [OPTIONAL] what3words (https://what3words.com) address of the workshop venue, without leading slashes e.g. "globe.lessening.computers"
 what3words:
 # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humandate: "FIXME"
+humandate: "Feb 17-20, 2025"
 # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
 humantime: "9:00 am - noon, PDT"  # PST is Nov-Mar; PDT is Mar-Nov
 # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-startdate: FIXME
+startdate: 2025-02-17
 # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-enddate: FIXME
+enddate: 2025-02-20
 
 # boxed, comma-separated list of contact names for the host, lead instructor, or whoever else is handling questions, like ["Marylyn Wescoff", "Fram Bilas", "Ruth Lichterman"]
-contact: ["Person One", "Optional Person Two..."]
+# (a list of 1 is fine!)
+contact: ["Noah Benson"]
 # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-email: ["first@example.org", "second@example.org"]
+email: ["nben@uw.edu"]
 # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 instructor: ["instructor one", "instructor two"] 
 # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
