@@ -31,7 +31,7 @@ enddate: 2025-02-20
 # (a list of 1 is fine!)
 contact: ["Noah Benson"]
 # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-email: ["nben@uw.edu"]
+contact_email: ["nben@uw.edu"]
 # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 instructor: ["instructor one", "instructor two"] 
 # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
@@ -41,7 +41,7 @@ collaborative_notes:
 # [OPTIONAL] Google form responder link for workshop sign-up form (e.g., https://docs.google.com/forms/d/e/1FAIpQLSdy-eKjqdLB7H2uMcbCtF_4KqKpzF0YVfj_hI0alxIFai8qEw/viewform?usp=dialog)
 googleform: https://docs.google.com/forms/d/e/1FAIpQLSdy-eKjqdLB7H2uMcbCtF_4KqKpzF0YVfj_hI0alxIFai8qEw/viewform?usp=dialog
 # [OPTIONAL] Once the course has sold out, set this to true; instead of the registration information, the page will display an alert about registration being sold out.
-classfull: false
+classfull: true
 # [OPTIONAL] If there is a waitlist, provide a link to it here, and it will be displayed when classfull (the above line) is true.
 waitlist:
 ---
