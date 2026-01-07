@@ -459,7 +459,19 @@ of code below the Schedule `<h2>` header below with
 <h2 id="schedule">Schedule</h2>
 
 {% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
+  {% if site.flavor == "python" %}
+    {% include swc/schedule-python.html %}
+  {% elsif site.flavor == "r" %}
+    {% include swc/schedule-r.html %}
+  {% elsif site.flavor == "both" %}
+    <p>Note that the Python and R tracks will meet together on days 1 and 2.</p>
+    <h3 id="schedpython">Python Track</h3>
+    {% include swc/schedule-python.html %}
+    <h3 id="schedr">R Track</h3>
+    {% include swc/schedule-r.html %}
+  {% else %}
+    {% include warning-flavor.html %}
+  {% endif %}
 {% elsif site.carpentry == "dc" %}
 {% include dc/schedule.html %}
 {% elsif site.carpentry == "lc" %}
