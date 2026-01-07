@@ -3,22 +3,46 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "FIXME"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
-latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["instructor one", "instructor two"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["helper one", "helper two"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["first@example.org","second@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
-what3words:           # optional: what3words (https://what3words.com) address of the workshop venue, without leading slashes e.g. "globe.lessening.computers"
+# Note that these have been very slightly updated from the carpentries official
+# version to a UW-specific version.
+
+# Brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+venue: "University of Washington"
+# Full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+address: "WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, Campus Box 351570, 3910 15th Ave NE, Seattle, WA 98195"
+#address: "online"
+country: "us"
+language: "en"
+# decimal latitude and longitude of the workshop venue (use https://www.latlong.net/)
+latitude: "47.606209"
+longitude: "-122.332071"
+# [OPTIONAL] what3words (https://what3words.com) address of the workshop venue, without leading slashes e.g. "globe.lessening.computers"
+what3words:
+# human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "FIXME"
+# human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+humantime: "9:00 am - noon, PDT"  # PST is Nov-Mar; PDT is Mar-Nov
+# machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+startdate: FIXME
+# machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+enddate: FIXME
+
+# boxed, comma-separated list of contact names for the host, lead instructor, or whoever else is handling questions, like ["Marylyn Wescoff", "Fram Bilas", "Ruth Lichterman"]
+contact: ["Person One", "Optional Person Two..."]
+# boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+email: ["first@example.org", "second@example.org"]
+# boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+instructor: ["instructor one", "instructor two"] 
+# boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["helper one", "helper two"]
+# [OPTIONAL] URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+collaborative_notes:
+# [OPTIONAL] Google form responder link for workshop sign-up form (e.g., https://docs.google.com/forms/d/e/1FAIpQLSdy-eKjqdLB7H2uMcbCtF_4KqKpzF0YVfj_hI0alxIFai8qEw/viewform?usp=dialog)
+googleform:
+# [OPTIONAL] Once the course has sold out, set this to true; instead of the registration information, the page will display an alert about registration being sold out.
+classfull: false
+# [OPTIONAL] If there is a waitlist, provide a link to it here, and it will be displayed when classfull (the above line) is true.
+waitlist:
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -84,26 +108,43 @@ It looks like you are setting up a website for a Software Carpentry curriculum b
 {% endif %}
 
 {% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
+GOOGLE FORM REGISTRATION LINK
+This block includes the registration information and a link to the
+associated Google form if the 'googleform' tag has been set in the
+header.  You can delete it if you do not want this section to appear.
 {% endcomment %}
-{% if page.eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
-<div id="eventbrite-widget-container"></div>
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-<script type="text/javascript">
-    window.EBWidgets.createWidget({
-        // Required
-        widgetType: 'checkout',
-        eventId: {{page.eventbrite}},
-        iframeContainerId: 'eventbrite-widget-container',
-    });
-</script>
+{% if page.classfull %}
+<div style="justify-content: center; width: 100%; display: flex;">
+  <div style="background-color: #EEFFEE; width: 100%; border-style: solid; border-color: red; border-width: 5px; padding: 5px; overflow: auto;">
+    <h2 id="registration">Registration Information</h2>
+    Unfortunately, there is no space left in this workshop.
+    {% if page.waitlist %}
+    If you wish to take a future workshop with us, you may add yourself to <a href="{{ page.waitlist }}">this waitlist</a>. Anyone on the waitlist is given an opportunity to register for the next workshop ahead of the its general registration period.
+    {% else %}
+    Please contact <a href="{{ page.contact_email[0] }}">the workshop organizers</a> to inquire about future workshops.
+    {% endif %}
+  </div>
+</div>
+{% elsif page.googleform %}
+<div style="justify-content: center; width: 100%; display: flex;">
+  <div style="background-color: #EEFFEE; width: 100%; border-style: solid; border-color: green; border-width: 5px; padding: 5px; overflow: auto;">
+  <h2 id="registration">Registration Information</h2>
+  <ul>
+    <li>In order to register for the workshop, you must first follow the <a href="#setup">setup instructions</a>, below. You must install all four tools: <a href="#the-bash-shell">the Bash Shell</a>, <a href="#git-1">Git</a>, a <a href="#text-editor">Text Editor</a>, and 
+{% if page.flavor == "python" %}
+    <a href="#python-1">Python</a>.
+{% elsif page.flavor == "r" %}
+    <a href="#r-1">R</a>.
+{% else %}
+    either <a href="#python-1">Python</a> or <a href="#r-1">R</a>, depending on which track you choose.
+{% endif %}
+    </li>
+    <li>If you are unable to follow the instructions, please email {{ page.contact[0] }} &lt;<a href="mailto:{{ page.contact_email[0] }}">{{ page.contact_email[0] }}</a>&gt; for assistance; we will help you install the software then give you a registration link.</li>
+    <li>Otherwise, once you have followed these instructions, please fill out <a href="{{ page.googleform }}">this Google Form</a>. You will not be able to complete the form if you have not successfully installed all four pieces of software.</li>
+    <li><b>The registration form will be closed at noon one day before the start of the workshop.</b></li>
+  </ul>
+  </div>
+</div>
 {% endif %}
 
 
@@ -281,9 +322,9 @@ Display the contact email address set in the configuration file.
 <p id="contact">
   <strong>Contact:</strong>
   Please email
-  {% if page.email %}
-  {% for email in page.email %}
-  {% if forloop.last and page.email.size > 1 %}
+  {% if page.contact_email %}
+  {% for email in page.contact_email %}
+  {% if forloop.last and page.contact_email.size > 1 %}
   or
   {% else %}
   {% unless forloop.first %}
@@ -434,7 +475,7 @@ how one of these schedule tables is constructed.
 {% endcomment %}
 
 {% if site.pilot %}
-The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. Please <a href="mailto:{{page.email}}">contact the workshop organisers</a> if you would like more information about the planned schedule.
+The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. Please <a href="mailto:{{page.contact_email[0]}}">contact the workshop organisers</a> if you would like more information about the planned schedule.
 {% endif %}
 
 <hr/>

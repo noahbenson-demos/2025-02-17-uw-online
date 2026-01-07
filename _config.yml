@@ -39,7 +39,7 @@ curriculum: "FIXME"
 # (as listed on https://software-carpentry.org/lessons/ and
 # https://datacarpentry.org/lessons/), change the
 # value of the variable below ("flavor") to get the schedule and installation
-# instructions updated accordingly (valid values are 'r' or 'python').
+# instructions updated accordingly (valid values are 'r', 'python', or 'both').
 # Note: this is only for Data Carpentry and SWC at this time.
 flavor: "FIXME"
 
@@ -53,7 +53,7 @@ pilot: false
 # Most workshops don't use extra pages. More information about extra
 # pages are included in the README:
 # https://github.com/carpentries/workshop-template#creating-extra-pages
-title: "Workshop Title"
+title: "University of Washington Software Carpentry, X Quarter"
 
 #------------------------------------------------------------
 # Incubator workshop settings (only relevant for workshops teaching a lesson
