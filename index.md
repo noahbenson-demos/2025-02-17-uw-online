@@ -91,7 +91,7 @@ header.  You can delete it if you do not want this section to appear.
 {% endcomment %}
 {% if page.classfull %}
 <div style="justify-content: center; width: 100%; display: flex;">
-  <div style="background-color: #EEFFEE; width: 100%; border-style: solid; border-color: red; border-width: 5px; padding: 5px; overflow: auto;">
+  <div style="background-color: #FFEEEE; width: 100%; border-style: solid; border-color: red; border-width: 5px; padding: 5px; overflow: auto;">
     <h2 id="registration">Registration Information</h2>
     Unfortunately, there is no space left in this workshop.
     {% if page.waitlist %}
@@ -434,19 +434,7 @@ of code below the Schedule `<h2>` header below with
 <h2 id="schedule">Schedule</h2>
 
 {% if site.carpentry == "swc" %}
-  {% if site.flavor == "python" %}
-    {% include swc/schedule-python.html %}
-  {% elsif site.flavor == "r" %}
-    {% include swc/schedule-r.html %}
-  {% elsif site.flavor == "both" %}
-    <p>Note that the Python and R tracks will meet together on days 1 and 2.</p>
-    <h3 id="schedpython">Python Track</h3>
-    {% include swc/schedule-python.html %}
-    <h3 id="schedr">R Track</h3>
-    {% include swc/schedule-r.html %}
-  {% else %}
-    {% include warning-flavor.html %}
-  {% endif %}
+{% include swc/schedule.html %}
 {% elsif site.carpentry == "dc" %}
 {% include dc/schedule.html %}
 {% elsif site.carpentry == "lc" %}
