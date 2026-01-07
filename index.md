@@ -39,7 +39,7 @@ helper: ["helper one", "helper two"]
 # [OPTIONAL] URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 collaborative_notes:
 # [OPTIONAL] Google form responder link for workshop sign-up form (e.g., https://docs.google.com/forms/d/e/1FAIpQLSdy-eKjqdLB7H2uMcbCtF_4KqKpzF0YVfj_hI0alxIFai8qEw/viewform?usp=dialog)
-googleform:
+googleform: https://docs.google.com/forms/d/e/1FAIpQLSdy-eKjqdLB7H2uMcbCtF_4KqKpzF0YVfj_hI0alxIFai8qEw/viewform?usp=dialog
 # [OPTIONAL] Once the course has sold out, set this to true; instead of the registration information, the page will display an alert about registration being sold out.
 classfull: false
 # [OPTIONAL] If there is a waitlist, provide a link to it here, and it will be displayed when classfull (the above line) is true.
@@ -58,31 +58,6 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 {% endcomment %}
 
 
-
-{% comment %}
-8< ============= For a workshop delete from here =============
-For a workshop please delete the following block until the next dashed-line
-{% endcomment %}
-
-
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to
-<a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
-your own website. If you are running a self-organized workshop or have not put
-in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a>
-to let us know about your workshop and our administrator may contact you if we
-need any extra information.
-If this is a pilot workshop for a new lesson,
-set the `pilot` field to `true` in `_config.yml`.
-For workshops teaching a lesson in The Carpentries Incubator,
-remember to uncomment the `incubator_lesson_site`, `incubator_pre_survey`, and `incubator_post_survey`
-fields in `_config.yml`
-</div>
-
-{% comment %}
-8< ============================= until here ==================
-{% endcomment %}
 
 {% comment %}
 Check DC curriculum
