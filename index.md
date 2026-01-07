@@ -30,7 +30,7 @@ enddate: FIXME
 # boxed, comma-separated list of contact names for the host, lead instructor, or whoever else is handling questions, like ["Marylyn Wescoff", "Fram Bilas", "Ruth Lichterman"]
 contact: ["Person One", "Optional Person Two..."]
 # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-email: ["first@example.org", "second@example.org"]
+contact_email: ["first@example.org", "second@example.org"]
 # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 instructor: ["instructor one", "instructor two"] 
 # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
@@ -115,7 +115,7 @@ header.  You can delete it if you do not want this section to appear.
 {% endcomment %}
 {% if page.classfull %}
 <div style="justify-content: center; width: 100%; display: flex;">
-  <div style="background-color: #EEFFEE; width: 100%; border-style: solid; border-color: red; border-width: 5px; padding: 5px; overflow: auto;">
+  <div style="background-color: #FFEEEE; width: 100%; border-style: solid; border-color: red; border-width: 5px; padding: 5px; overflow: auto;">
     <h2 id="registration">Registration Information</h2>
     Unfortunately, there is no space left in this workshop.
     {% if page.waitlist %}
